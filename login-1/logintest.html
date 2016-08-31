@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style type="text/css" media="screen">
+		body{
+			background-image: url('login_bg.jpg');
+			background-repeat: no-repeat;
+		}
+		.name{
+			width: 296px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 100%;
+			border:1px #e6e6e6 solid;
+			padding:10px 12px;
+			outline-color: gold;
+		}
+		.header{
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			position: fixed;
+			z-index: 200;
+			top: 0px;
+			left: 0px;
+			background-color: #0767c8;
+			border-radius: 6px;
+			height: 45px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+			color: red;
+		}
+		.login{
+			position: absolute;
+			top:120px;
+			right: 100px;
+			width: 340px;
+			height: 439px;
+			padding: 20px 0 0 20px;
+			margin:30px 40px 20px 0;
+			background-color: #fff;
+			border-radius: 3px;
+		}
+		h1{
+			font-size: 100%;
+		}
+		.outer{
+			margin-top: 0px;
+			height: auto;
+			width: 400px;
+			line-height: 28px;
+			margin:0 auto;
+			color:#999;
+			position: relative;
+
+		}
+		.image{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+		.content{
+			width: 1050px;
+			margin: auto;
+		}
+		.label-warning{
+			width: 400px;
+			height: 28px;
+			padding-left: 32px;
+			color: rgb(204,0,0);
+			display: block;
+			background:url('warning.png') 10px 5px no-repeat;
+			font-size: 12px;
+		}
+		.btn_login{
+			width: 321px;
+			height: 45px;
+			font-family: "Microsoft YaHei";
+			font-size: 16px;
+			letter-spacing: 2px;
+			color: #fff;
+			border-radius: 3px;
+			background-color: #942314;
+			display: inline-block;
+			text-shadow: none;
+			border:1px solid #942314;
+			cursor: pointer;
+			outline: none;
+		}
+		.btn_login:hover{
+			background-color: #c9302c;
+			border-color: #ac2925;
+		}
+		.btn_reg{
+			width: 321px;
+			height: 45px;
+			font-family: "Microsoft YaHei";
+			font-size: 16px;
+			letter-spacing: 2px;
+			color: #000;
+			border-radius: 3px;
+			background-color: #fff;
+			display: inline-block;
+			text-shadow: none;
+			border:1px solid #999999;
+			cursor: pointer;
+			outline: none;
+		}
+		.btn_reg:hover{
+			background-color: #bbb;
+			border-color: #999900;
+		}		
+		.forgrt{
+			width: 400px;
+			height: auto;
+			line-height: 28px;
+			color: #999;
+			position: relative;
+			padding-left: 3px;
+		}
+		#f_pass{
+			color: #999999;
+			display: inline-block;
+			position: relative;
+			left: 260px;
+			font-size: 12px;
+			
+			text-decoration: none;
+			
+		}
+		.other_log{
+			margin:0;
+			margin-top: 30px;
+			font-size: 12px;
+			line-height: 18px;
+			font-family: "Microsoft YaHei";
+			color:#999;
+		}
+		#qq{
+			display: block;
+			background:url("applogo.png") no-repeat;
+			float: left;
+			height: 20px;
+			width: 60px;
+			margin:20px 65px 20px 0px;
+			padding-top: 40px;
+			font-size: 12px;
+			font-family: "Microsoft YaHei";
+			color:#999;
+			text-decoration: none;
+		}
+		.logo{
+			background: url('logo.png') no-repeat;
+			width: 70px;
+			height: 30px;
+			float: left;
+			position: absolute;
+			left: 150px;
+			top: 7.5px;
+			margin-right: 18px;
+			border-right: 1px #D9D9D9 solid;
+		}
+		.logo_tips{
+			width: 190px;
+			height: 30px;
+			float: left;
+			font-family: "Microsoft YaHei";
+			font-size: 20px;
+			font-weight: normal;
+			color: #fff;
+			position: relative;
+			left: 239px;
+			top:7.5px;
+			letter-spacing: 2px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header" >
+		<a href="#" class="logo"></a>
+		<span class="logo_tips">欢迎登录</span>
+	</div>
+	<div class="content">
+	<div class="image">
+		<img src="login_monkey.png" alt="haha" />
+	</div>
+	<div class="login">
+		<p class="outer">
+			<input class="name" type="text" name="name" placeholder="请输入手机号/用户名" />
+			<span class="label-warning">请输入手机号/用户名</span>
+		</p>
+		<p class="outer">
+			<input class="name" type="password" name="passwd" placeholder="请输入密码" />
+			<span class="label-warning">请输入密码</span>
+		</p>
+		<p class="outer">
+			<button type="button" class="btn_login">立即登录</button>
+		</p>
+		<p class="forget">
+			<a href="#" id="f_pass">忘记密码？</a>
+		</p>
+		<p class="outer">
+			<button type="buton" class="btn_reg">注册网校账号</button>
+		</p>
+		<p class="other_log">
+			其他方式登录
+		</p>
+		<p class="outer">
+			<a id="qq" href="#">QQ登录</a>
+			<a id="qq" href="#">微信登录</a>
+			<a id="qq" href="#">微博登录</a>
+		</p>
+	</div>
+	</div>
+</body>
+</html>
