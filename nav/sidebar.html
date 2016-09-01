@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>乐学一百导航条</title>
+	<style type="text/css" media="screen">
+		body{
+			font-family: 'Microsoft Yahei';
+		}
+		.header{
+			width: 100%;
+			min-width: 1280px;
+			height: 70px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 2;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+			background-color: #fff;
+		}
+		.main{
+			width: 1280px;
+			margin: 0 auto;
+			height: 70px;
+		}
+		img{
+			padding: 12px 15px 15px 15px;
+			float: left;
+			cursor: pointer;
+		}
+		.ul1,.li1{
+			list-style: none;
+			display: block;
+			float: left;
+			margin: 0px;
+			color: #777;
+		}
+		.ul1{
+			padding-left: 0px;
+		}
+		.li1{
+			padding: 7px 15px;
+			line-height: 20px;
+		}
+		.li1:hover{
+			color: #000;
+			cursor: pointer;
+			border-bottom: 2px solid #0b77c5;			
+		}
+		.nav{
+			font-family: 'Microsoft Yahei';
+			padding-top: 23px;
+			float: left;
+			list-style: none;
+			font-size: 14px;
+		}
+		a{
+			color: #777;
+			text-decoration: none;
+		}
+		.reg{
+			margin: 0px;
+			width: 82px;
+			height: 34px;
+			float: right;
+			position: relative;
+			right: 15px;
+			top:18px;
+			padding: 6px 12px;
+			border-radius: 5px;
+			background-color: #f0ad4e;
+			border:1px solid #eea236;
+			outline: none;
+			font-size: 13px;
+			line-height: 20px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+		.reg:hover{
+			background-color: #f07a1b;
+		}
+		.log{
+			width: 28px;
+			height: 20px;
+			padding: 7px 15px;
+			line-height: 20px;
+			font-size: 14px;
+			font-family: 'Microsoft Yahei';
+			float: right;
+			margin: 18px 15px;
+		}
+		.active{
+			width: 70px;
+			height: 20px;
+			padding: 7px 15px;
+			line-height: 20px;
+			font-size: 14px;
+			padding-right: 0px;
+			font-family: 'Microsoft Yahei';
+			float: right;
+			color: #EE8F3E;
+			margin: 18px 15px;			
+			margin-right: 0px;
+		}
+		.container{
+			width: 100%;
+			max-width: 1560px;
+			margin: 0 auto;
+			position: absolute;
+			top: 0px;
+		}
+		.pic{
+			margin: 170px auto;
+			width: 100%;
+			height: 380px;
+			background-color: #999;
+		}
+		.content{
+			width: 1280px;
+			margin: 0 auto;
+			position: relative;
+			top: -600px;
+		}
+		.sidebar{
+			width: 220px;
+			line-height: 50px;
+			color: #fff;
+			cursor: pointer;
+			position: absolute;
+			left: 15px;
+			font-size: 14px;
+			z-index: 1;
+			overflow: visible;
+			z-index: 1;			
+		}
+		.dt{
+			width: 220px;
+			height: 50px;
+			background-color: orange;
+		}
+		.dd{
+			width: 220px;
+			height: 380px;
+			background-color: rgb(30,137,224);
+		}
+		.li:hover{
+			background-color: #123;
+		}
+		.ul{
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		.li{
+			height: 39px;
+			width: 200px;
+			padding: 18px 10px;
+			border-top: 1px solid rgba(255,255,255,0.2);
+			list-style: none;
+			line-height: 50px;
+		}
+		h3{
+			width: 200px;
+			height: 20px;
+			line-height: 20px;
+			padding: 0;
+			margin: 0;
+		}
+		.show{
+			position: absolute;
+			left: 215px;
+			top: 50px;
+			width: 320px;
+			height: 376px;
+			border-top: 2px solid rgb(30,137,224);
+			border-right: 2px solid rgb(30,137,224);
+			border-bottom: 2px solid rgb(30,137,224);
+			background-color: #eee;
+			display: none;
+		}
+		h1{
+			width: 100px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="main">
+			<img src="logo.png" alt="">
+			<ul class="nav ul1"> 
+				<li class="li1"><a href="#">首页</a></li>
+				<li class="li1">如何学习</li>
+				<li class="li1">家长</li>
+				<li class="li1">教师</li>
+				<li class="li1">加入会员</li>
+				<li class="li1">礼品店</li>
+				<li class="li1">小乐社区</li>
+			</ul>
+			<button class="reg" type="button">免费注册</button>
+			<a class="log" href="#">
+				登录
+			</a>
+			<a class="active" href="#">
+				会员卡激活
+			</a>
+		</div> 
+	</div>
+
+
+	<!-- 主要内容区域 -->
+	<div class="container">
+		<div class="pic">
+		</div>
+		<div class="content">
+			<div class="sidebar">
+				<div class="dt">
+					全部课程分类
+				</div>
+				<div class="dd">
+					<ul class="ul">
+						<li class="li" onmouseover="show();" onmouseleave="leave();">
+							<h3>
+							小低
+							<i style="float:right"> > </i>
+							</h3>
+							<p style="width:200px;height:30px;color:white;margin:0">
+								<a style="width:50px;margin:0;color:white;" href="#">幼升小</a>
+								<a style="width:50px;margin:0;color:white;" href="#">一年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">二年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">三年级</a>								
+							</p>
+						</li>
+						<li class="li" onmouseover="show();" onmouseleave="leave();">
+							<h3>
+							小低
+							<i style="float:right"> > </i>
+							</h3>
+							<p style="width:200px;height:30px;color:white;margin:0">
+								<a style="width:50px;margin:0;color:white;" href="#">幼升小</a>
+								<a style="width:50px;margin:0;color:white;" href="#">一年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">二年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">三年级</a>
+							</p>							
+						</li>
+						<li class="li" onmouseover="show();" onmouseleave="leave();">
+							<h3>
+							小高
+							<i style="float:right"> > </i>
+							</h3>
+							<p style="width:200px;height:30px;color:white;margin:0">
+								<a style="width:50px;margin:0;color:white;" href="#">四年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">五年级</a>
+								<a style="width:50px;margin:0;color:white;" href="#">六年级</a>			
+							</p>							
+						</li>
+						<li class="li" onmouseover="show();" onmouseleave="leave();">
+							<h3>
+							初中
+							<i style="float:right"> > </i>
+							</h3>
+							<p style="width:200px;height:30px;color:white;margin:0">
+								<a style="width:50px;margin:0;color:white;" href="#">初一</a>
+								<a style="width:50px;margin:0;color:white;" href="#">初二</a>
+								<a style="width:50px;margin:0;color:white;" href="#">初三</a>			
+							</p>							
+						</li>
+						<li class="li" onmouseover="show();" onmouseleave="leave();">
+							<h3>
+							高中
+							<i style="float:right"> > </i>
+							</h3>
+							<p style="width:200px;height:30px;color:white;margin:0">
+								<a style="width:50px;margin:0;color:white;" href="#">高一</a>
+								<a style="width:50px;margin:0;color:white;" href="#">高二</a>
+								<a style="width:50px;margin:0;color:white;" href="#">高三</a>
+							</p>							
+						</li>
+					</ul>
+				</div>
+			</div>	
+
+			<div id="show" class="show">
+				<h1>
+					详情栏
+				</h1>
+			</div>		
+		</div>
+	</div>
+</body>
+<script>
+	function show(){
+		document.getElementById('show').style.display = "inline";
+	}
+	function leave(){
+		document.getElementById('show').style.display = "none";		
+	}
+</script>
+</html>

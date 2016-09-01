@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度搜索框</title>
+	<style type="text/css" media="screen">
+		.main{
+			width:960px;
+			margin:0 auto;
+		}
+		.s_wrap{
+			display: block;
+			width: 536px;
+			height: 40px;
+			position: relative;
+			float: left;
+		}
+		.search{
+			padding: 9px 48px 9px 7px;
+			width: 480px;
+			height: 20px;
+			border:1px solid #ccc;
+			border-right: 0;
+			vertical-align: top;
+			outline: none;
+
+		}
+
+		.photo{
+			position: absolute;
+			top: 50%;
+			right: 11px;
+			height: 16px;
+			width: 18px;
+			margin-top: -8px;
+			background: #fff url('../image/camera.png') no-repeat;
+			cursor: pointer;
+		}
+		.plus{
+			float: left;
+		}
+		.btn{
+			width: 104px;
+			height: 40px;
+			background-color: #999;
+			outline: none;
+			border:none;
+			cursor: pointer;
+		}
+		.btn:hover{
+			background-color: #555;
+		}
+		.baidu{
+			width: 641px;
+			height: 40px;
+			margin: 200px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="baidu">
+		<span class="s_wrap">
+			<span class="photo"></span>
+			<input type="text" class="search" maxlength="100" />
+		</span>
+		<span class="plus">
+			<input class="btn" type="button" name="" value="百度一下" />
+		</span>
+		</div>
+	</div>
+</body>
+</html>
