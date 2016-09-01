@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>乐学一百导航条</title>
+	<style type="text/css" media="screen">
+		.header{
+			width: 100%;
+			min-width: 1280px;
+			height: 70px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+			background-color: #fff;
+		}
+		.main{
+			width: 1280px;
+			margin: 0 auto;
+			height: 70px;
+		}
+		img{
+			padding: 12px 15px 15px 15px;
+			float: left;
+		}
+		ul,li{
+			list-style: none;
+			display: block;
+			float: left;
+			margin: 0px;
+			color: #777;
+		}
+		ul{
+			padding-left: 0px;
+		}
+		li{
+			padding: 7px 15px;
+			line-height: 20px;
+		}
+		li:hover{
+			color: #000;
+			cursor: pointer;
+			border-bottom: 2px solid #0b77c5;			
+		}
+		.nav{
+			font-family: 'Microsoft Yahei';
+			padding-top: 23px;
+			float: left;
+			list-style: none;
+			font-size: 14px;
+		}
+		a{
+			color: #777;
+			text-decoration: none;
+		}
+		.reg{
+			margin: 0px;
+			width: 82px;
+			height: 34px;
+			float: right;
+			position: relative;
+			right: 15px;
+			top:18px;
+			padding: 6px 12px;
+			border-radius: 5px;
+			background-color: #f0ad4e;
+			border:1px solid #eea236;
+			outline: none;
+			font-size: 13px;
+			line-height: 20px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+		.reg:hover{
+			background-color: #f07a1b;
+		}
+		.log{
+			width: 28px;
+			height: 20px;
+			padding: 7px 15px;
+			line-height: 20px;
+			font-size: 14px;
+			font-family: 'Microsoft Yahei';
+			float: right;
+			margin: 18px 15px;
+		}
+		.active{
+			width: 70px;
+			height: 20px;
+			padding: 7px 15px;
+			line-height: 20px;
+			font-size: 14px;
+			padding-right: 0px;
+			font-family: 'Microsoft Yahei';
+			float: right;
+			color: #EE8F3E;
+			margin: 18px 15px;			
+			margin-right: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="main">
+			<img src="logo.png" alt="">
+			<ul class="nav"> 
+				<li><a href="#">首页</a></li>
+				<li>如何学习</li>
+				<li>家长</li>
+				<li>教师</li>
+				<li>加入会员</li>
+				<li>礼品店</li>
+				<li>小乐社区</li>
+			</ul>
+			<button class="reg" type="button">免费注册</button>
+			<a class="log" href="#">
+				登录
+			</a>
+			<a class="active" href="#">
+				会员卡激活
+			</a>
+		</div> 
+	</div>
+</body>
+</html>

@@ -10,20 +10,28 @@
 */			margin:0 auto;
 		}
 		.outer-header{
-			width: auto;
+			width: 100%;
+			/*min-width 解决width 100% 浏览器缩小后右边变成空白的问题*/
+			min-width: 1280px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 20;
+			margin: 0px;
+			padding: 0px;
 			background-color: #086cd5;
 			box-shadow:0 2px 3px rgba(0,0,0,0.4);
 			border-radius: 3px;					
 		}
 		.header{
-			width: 960px;
+			width: 1280px;
 			margin: 0 auto;
 			height: 45px;
 			color: white;	
 		}
 		.container{
 			width: 1280px;
-			margin:0 auto;
+			margin:45px auto;
 			height: 1000px;
 			border-left: 3px solid gold;
 			border-right: 3px solid gold;
