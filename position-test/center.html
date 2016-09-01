@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>position-content-center</title>
+	<style type="text/css" media="screen">
+		h1{
+			width: 382px;
+/*			margin:0 auto;可以自动将内容区域居中,但是内容区域必须设置宽度，如果内容区长度铺满了整个页面，但是其中的文字又只有一点点，那么是不可能居中的
+*/			margin:0 auto;
+		}
+		.outer-header{
+			width: auto;
+			background-color: #086cd5;
+			box-shadow:0 2px 3px rgba(0,0,0,0.4);
+			border-radius: 3px;					
+		}
+		.header{
+			width: 960px;
+			margin: 0 auto;
+			height: 45px;
+			color: white;	
+		}
+		.container{
+			width: 1280px;
+			margin:0 auto;
+			height: 1000px;
+			border-left: 3px solid gold;
+			border-right: 3px solid gold;
+		}
+		.left{
+			position: relative;
+			width: 540px;
+			float: left;
+			height: 545px;
+			top: 1px;
+			left: 0px;
+		}
+		.right{
+			/*relative 相对于这个元素  【本来应该在的位置】（如果没有这个position，元素应该在什么位置）  进行位移定位，top,left,right,bottom */
+/*			如果是absolute，那么绝对定位，如果其父元素有定义position，其就相对于父元素位移，如果父元素没有，那么它就相对于浏览器边框位移
+*/			position: relative;
+			right: 80px;
+			top: 20px;
+			border-radius: 5px;
+			width: 360px;
+			height: 460px;
+			padding: 20px 20px 0px 20px;
+			background-color: black;
+			float: right;
+		}
+		.name{
+			width: 320px;
+			padding: 20px;
+			border-width: 3px;
+			line-height: 18px;
+			border-radius: 3px;
+			font-size: 100%;
+			outline-color: yellow;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="outer-header">
+	<div class="header">
+	<h1>	
+		Position Content Center
+	</h1>
+	</div>
+	</div>
+	<hr>
+	<div class="container">
+		<div class="left">
+			<img src="../login-1/login_monkey.png" alt="haha" />
+		</div>
+		<div class="right">
+			<input type="text" class="name" placeholder="请输入您的用户名"/>
+		</div>
+	</div>
+</body>
+</html>
