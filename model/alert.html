@@ -18,13 +18,16 @@
 		});			
 		$("#hided").click(function(){
 			$("#dialog").animate({top:-180});			
-			$("#fugai").hide();			
+			$("#fugai").fadeOut('slow');			
 		});
 		$("#sub").click(function(){
 			var choice = $("#choice").val();
 			var dream = $("#dream").val();
 			$("#choice_a").text(choice);
 			$("#dream_a").text(dream);
+			$("#hided").click();
+		});
+		$("#fugai").click(function(){
 			$("#hided").click();
 		})					
 		});
@@ -74,9 +77,11 @@
 <body>
 	<input id="showd" type="button" class="btn btn-danger" style="margin:50px 10px 10px 10px !important;" name="haha" value="弹出框来 快快快." />
 	<div style="margin-left:10px;">
-		<span class="label label-danger" style="margin-right:5px">Your Choice:</span><span id="choice_a" class="label label-warning"></span>
+		<span class="label label-danger" style="margin-right:5px">Your Choice:</span>
+		<span id="choice_a" class="label label-warning"></span>
 		<br><br>
-		<span class="label label-danger" style="margin-right:5px">Your Dream:</span><span id="dream_a" class="label label-warning"></span>		
+		<span class="label label-danger" style="margin-right:5px">Your Dream:</span>
+		<span id="dream_a" class="label label-warning"></span>		
 	</div>
 	<div id="fugai">
 	</div>
