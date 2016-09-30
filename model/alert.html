@@ -19,7 +19,14 @@
 		$("#hided").click(function(){
 			$("#dialog").animate({top:-180});			
 			$("#fugai").hide();			
-		});					
+		});
+		$("#sub").click(function(){
+			var choice = $("#choice").val();
+			var dream = $("#dream").val();
+			$("#choice_a").text(choice);
+			$("#dream_a").text(dream);
+			$("#hided").click();
+		})					
 		});
 	</script>
 	<style>
@@ -65,7 +72,12 @@
 	</style>
 </head>
 <body>
-	<input id="showd" type="button" class="btn btn-danger" style="margin:0 auto !important;" name="haha" value="弹出框来 快快快." />
+	<input id="showd" type="button" class="btn btn-danger" style="margin:50px 10px 10px 10px !important;" name="haha" value="弹出框来 快快快." />
+	<div style="margin-left:10px;">
+		<span class="label label-danger" style="margin-right:5px">Your Choice:</span><span id="choice_a" class="label label-warning"></span>
+		<br><br>
+		<span class="label label-danger" style="margin-right:5px">Your Dream:</span><span id="dream_a" class="label label-warning"></span>		
+	</div>
 	<div id="fugai">
 	</div>
 	<div id="dialog">
@@ -76,16 +88,16 @@
 		<table class="table">
 			<tr>
 				<td style="vertical-align:middle;text-align:right;">当前你的选择是：</td>
-				<td><input type="text" class="form-control" style="width:150px;" /></td>
+				<td><input id="choice" type="text" class="form-control" style="width:150px;" /></td>
 			</tr>
 			<tr>
 				<td style="vertical-align:middle;text-align:right;">你的梦想(梦)是什么：</td>
-				<td><input type="text" class="form-control" style="width:150px;" /></td>
+				<td><input id="dream" type="text" class="form-control" style="width:150px;" /></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>
-					<input type="button" class="btn btn-danger" name="" value="确认提交" />
+					<input id="sub" type="button" class="btn btn-danger" name="" value="确认提交" />
 				</td>
 			</tr>
 		</table>
