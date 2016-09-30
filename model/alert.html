@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出框</title>
+	<script type="text/javascript" src="./jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bootstrap.min.css" />
+	<script>
+		$(function(){
+			// for(var i=0;i<5000;i++) {
+			// 	$("body").append("<span style='float:left;display:block;'>"+i+"</span>");
+			// }
+		$("body").css("height","1000px");
+		$("#fugai").css("height",$("body").height());
+		$("#showd").click(function(){
+			$("#fugai").show();
+			$("#dialog").animate({top:'50%'});
+		});			
+		$("#hided").click(function(){
+			$("#dialog").animate({top:-180});			
+			$("#fugai").hide();			
+		});					
+		});
+	</script>
+	<style>
+		#fugai{
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			background-color:#222;
+			opacity:0.4;
+			z-index:1;
+			display:none;
+		}	
+		#dialog{
+			position:fixed;
+			top:-180px;
+			left:50%;
+			width:420px;
+			height:360px;
+			margin-top:-180px;
+			margin-left:-210px;
+			background-color:rgba(255,255,255,1);
+/*			border-radius:20px;
+*/			border:1px solid #ccc;
+			text-align:center;
+			z-index:2;box-shadow:0 0 2px #CCC;
+		}
+		#hided{
+			border-radius:50%;
+			background-color:#ccc;
+			width:30px;height:30px;
+			cursor:pointer;
+			position: absolute;
+			top: 2px;
+			right: 2px;
+/*			margin:2px;
+*/			display:block;
+			z-index: 4;			
+		}
+		td{
+			border:none !important;
+		}
+	</style>
+</head>
+<body>
+	<input id="showd" type="button" class="btn btn-danger" style="margin:0 auto !important;" name="haha" value="弹出框来 快快快." />
+	<div id="fugai">
+	</div>
+	<div id="dialog">
+		<img src="./sailing.png" style="width:420px;height:auto;position:relative;top:-42px;" alt="无">
+		<div id="hided">
+			<span style="font-size:21px;">X</span>
+		</div>		
+		<table class="table">
+			<tr>
+				<td style="vertical-align:middle;text-align:right;">当前你的选择是：</td>
+				<td><input type="text" class="form-control" style="width:150px;" /></td>
+			</tr>
+			<tr>
+				<td style="vertical-align:middle;text-align:right;">你的梦想(梦)是什么：</td>
+				<td><input type="text" class="form-control" style="width:150px;" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" class="btn btn-danger" name="" value="确认提交" />
+				</td>
+			</tr>
+		</table>
+	</div>	
+</body>
+</html>
