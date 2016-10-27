@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Simditor</title>
+  <link rel="stylesheet" type="text/css" href="./simditor-2.3.6/styles/simditor.css" />
+
+  <script type="text/javascript" src="./simditor-2.3.6/scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="./simditor-2.3.6/scripts/module.js"></script>
+  <script type="text/javascript" src="./simditor-2.3.6/scripts/hotkeys.js"></script>
+  <script type="text/javascript" src="./simditor-2.3.6/scripts/uploader.js"></script>
+  <script type="text/javascript" src="./simditor-2.3.6/scripts/simditor.js"></script>
+  <style>
+    div .simditor-body{
+      overflow-x: scroll;
+    }
+  </style>
+</head>
+<body>
+  <div style="margin:100px auto;width:800px">
+    <textarea style="width:100%;overflow:scroll" id="editor" placeholder="请输入文字..." autofocus>23</textarea>
+    <script type="text/javascript">
+      var editor = new Simditor({
+        textarea: $('#editor'),
+        upload: {
+          url:'upload.php',
+          params: null,
+          connectionCount:3,
+          leaveConfirm:'正在上传，你确定要离开吗？'
+        },
+        tabIndent: true,
+        toolbar : [
+                'title',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'color',
+                'ol',
+                'ul',
+                'blockquote',
+                'code',
+                'table',
+                'link',
+                'image',
+                'hr',
+                'indent',
+                'outdent',
+                'alignment'
+        ],
+        toolbarFloatOffset : 5,
+        pasteImage:true,
+
+      });
+    </script>
+  </div>
+</body>
+</html>
