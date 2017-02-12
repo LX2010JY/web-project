@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>flex 布局</title>
+        <style>
+            .flex{
+                width: 100%;
+                display: -webkit-flex;
+                /*row-reverse：反向排列 column:纵向排列*/
+                flex-direction: row-reverse;
+                border: 1px dotted #ccc;
+            }
+            .flex2{
+                width: 100%;
+                /*wrap 表示如果子元素溢出父元素，则换行。而默认是nowrap 表示即使子元素比父元素宽，也不会溢出，而是按比例缩小*/
+                flex-wrap: wrap;
+                display: -webkit-flex;
+                /*子元素如果不能充满父元素，则 选择 居中 center，居左 flex-start 居右 flex-end;space-around 是居中但是元素之间会有间隔，各个间隔宽度是相等的 */
+                justify-content: center;
+                /*justify-content: space-around;*/
+                /*垂直居中*/
+                align-items: center;
+            }
+            .item2 {
+                width:150px;
+                background-color: #339;
+                text-align: center;
+            }
+            .item {
+                flex: 1;
+                text-align: center;
+            }
+            .pic {
+                width:320px;
+                height:568px;
+                background-color: #234;
+                display: table;
+            }
+            body{
+                margin:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <div class="item">num 1</div>
+            <div class="item">num 2</div>
+            <div class="item">num 3</div>
+        </div>
+        <div class="flex2">
+            <div class="item2">1</div>
+            <div class="item2">2</div>
+            <!-- order 排序，越小越靠前 -->
+            <div class="item2" style="order:-1">3</div>
+        </div>
+        <div class="pic">
+            <div style="display:table-cell;vertical-align:middle;text-align:center;">320 X 568</div>
+        </div>
+    </body>
+</html>
