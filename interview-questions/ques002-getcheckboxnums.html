@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>获取checkbox数量</title>
+        <link type="text/css" rel="stylesheet" href="./public.css" />
+        <script>
+            function addcheck() {
+                var html = "<input type='checkbox' />";
+                document.getElementById('content').innerHTML = html + document.getElementById('content').innerHTML;
+            }
+            function getnum() {
+                var inputList = document.getElementBysByTagName('input');
+                var checkBoxList = [];
+                var len = inputList.length;
+                while(len--) {
+                    if(inputList[len].type == 'checkbox') {
+                        checkBoxList.push(inputList)
+                    }
+                }
+                alert(checkBoxList.length);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="shell">
+            <div id="content" class="content">
+                <input type="checkbox" />
+                <input type="button" onclick="addcheck();" value="添加" />
+                <input type="button" onclick="getnum()" value="计算" />
+            </div>
+
+        </div>
+    </body>
+</html>
+2625,2626,2762,116012

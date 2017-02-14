@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>循环定时器</title>
+		<link type="text/css" rel="stylesheet" href="./public.css" />
+		<script>
+			window.onload = function() {
+				// 输出结果，1000毫秒之后全部输出10
+				// 原因：定时器是异步，1000毫秒之后才会执行函数里面的内容，所以定时器刚开启的时候，是没有获取i的值的，1000毫秒之后才会获取，那个时候，for循环已经执行完了
+				// 10个定时器获取到的都是 最终的i值 --- 10
+				// 由于for循环执行就在一瞬间，所以10个定时器几乎同时生成，异步不会等待一个定时器完成以后再接着执行for循环
+
+				/*****************考输出结果*********************/
+				for(var i=0;i<10;i++) {
+					setTimeout(function(){
+						document.getElementById('content').innerText += i.toString();
+					},1000);
+				}
+				/**************************************/
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<div class="shell">
+			<div class="content">
+				<div id="content" class="title">
+					定时器输出循环0-9：
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
