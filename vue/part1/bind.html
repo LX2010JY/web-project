@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>vue</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app-2">
+            <!-- v-bind属性 被称为指令 前面带有v-表示他们是vue.js提供的特殊属性，这里的作用是将span元素的title属性绑定vue的message属性 -->
+            <span v-bind:title="message">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+        </div>
+    </body>
+    <script>
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: 'You loaded this page on ' + new Date()
+            }
+    })
+    </script>
+</html>

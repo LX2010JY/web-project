@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>vue 组件应用</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app-7">
+            <ol>
+                <todo-item v-for="item in todos" v-bind:todo="item"></todo-item>
+            </ol>
+        </div>
+        <script>
+            Vue.component('todo-item',{
+                props:['todo'],
+                template: '<li>{{ todo.text }}</li>'
+            });
+            var app7 = new Vue({
+                el:'#app-7',
+                data:{
+                    todos:[
+                        {text:'I need JavaScript.'},
+                        {text:'I need node.js.'},
+                        {text:'I need Html5+css3.'},
+                        {text:'I need response.'},
+                        {text:'I need python.'},
+                        {text:'I need websocket.'},
+                        {text:'I need vue.js.'},
+                        {text:'What the Fuck.'},
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>
