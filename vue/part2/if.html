@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue if 切换 相同元素复用</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="demo">
+            <!-- 在切换模式的时候，两个template并不是完全替换，其中一样的部分是直接复用的，比如input框，只需要改掉placeholder，所以切换模式，输入框的内容不会消失 -->
+            <template v-if="loginType==='username'" >
+                <label>Username</label>
+                <!-- 加上key以后，input元素不会被复用，其中的值也不会保留，完全重新生成 -->
+                <input placeholder="Enter your username" key="username-input">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email address" key="email-input">
+            </template>
+            <button @click="toggleType">切换登录方式</button>
+        </div>
+        <script>
+            var demo = new Vue({
+                el : '#demo',
+                data:{
+                    loginType : 'username'
+                },
+                methods:{
+                    toggleType : function() {
+                        this.loginType==='username' ? this.loginType='email' : this.loginType='username';
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
