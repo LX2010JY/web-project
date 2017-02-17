@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue 过渡</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <link href="https://unpkg.com/animate.css@3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+        <style>
+            .fade-enter-active, .fade-leave-active {
+                transition: opacity .5s;
+            }
+            .fade-enter, .fade-leave-active {
+                opacity: 0;
+            }
+            .slide-fade-enter-active {
+                transition: all .3s ease;
+            }
+            .slide-fade-leave-active {
+                /*translation负责从当前 位置，样式 变更到transform的新的效果，中间的这个过程，延长，而不是一步到位*/
+                transition: all .8s cubic-bezier(1.0,0.5,0.8,1.0);
+            }
+            .slide-fade-enter,.slide-fade-leave-active{
+                /*transform 负责变形，位移，但是没有中间过程，直接一步到位*/
+                transform: translateX(800px);
+                opacity: .6;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="demo" style="display:-webkit-flex;">
+            <div style="flex:1">
+                <button v-on:click="show = !show">
+                    Toggle
+                </button>
+                <transition name='slide-fade'>
+                    <p v-if="show">This is Hello</p>
+                </transition>
+                <transition name="fade">
+                    <p v-if="show">Hello</p>
+                </transition>
+                <transition name="custom-classes-transition" enter-active-class="animated hinge" leave-active-class="animated hinge">
+                    <p v-if="show">Hello  animate.css</p>
+                </transition>
+            </div>
+            <div style="flex:1">
+                <button @click="show =!show">掉落吧</button>
+                <div style="width:300px;height:100px;background-color:#246;" v-bind:class="rotate">123</div>
+            </div>
+
+        </div>
+        <script>
+            new Vue({
+                el:"#demo",
+                data: {
+                    show: true
+                },
+                computed: {
+                    rotate : function() {
+                        if(!this.show) {
+                            return {'animated':true,'hinge':true}
+                        }else{
+                            return {'animated':true,'rollin':true}
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
